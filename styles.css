@@ -1,4 +1,13 @@
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
 .warning {
-    color: red;
-    font-size: 2em;
+  color: red;
+  font-size: 2em;
 }

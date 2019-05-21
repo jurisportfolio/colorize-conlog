@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
     <title></title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h2>Zadanie</h2>
-        <p>
-            1. Stwórz funkcję prettyDir(str, obj), jako ulepszoną funcję console.dir() Funkcja ma wypisać wszystkie property obiektu lub tablicy wewnątrz grupy i pokolorować je w zależności od typu. Liczby na niebiesko. Stringi na czerwono. Obiekty na zielono. Tablice
-            na różowo.
-        </p>
-        <h2>Rozwiązanie</h2>
-        <p>
-            Funkcja <code>prettyDir()</code> przyjmuje stringowy "label" i kolekcję "obj". Sprawdza czy "obj" może być iterowany i przekazuje go do funkcji{" "}
-            <code>logIfObjectOrArray()</code> ktora tworzy grupę w consoli dla logowanie properties tego "obj". Jeżeli propertie to kolekcja, odbywa się rekursywne wywółanie funkcji <code>logIfObjectOrArray()</code>{" "}
-        </p>
-        <h1 class="warning">To see results please open console!!!</h1>
+      <h2>Zadanie</h2>
+      <p>
+        1. Stwórz funkcję prettyDir(str, obj), jako ulepszoną funcję
+        console.dir() Funkcja ma wypisać wszystkie property obiektu lub tablicy
+        wewnątrz grupy i pokolorować je w zależności od typu. Liczby na
+        niebiesko. Stringi na czerwono. Obiekty na zielono. Tablice na różowo.
+      </p>
+      <h2>Rozwiązanie</h2>
+      <p>
+        Funkcja <code>prettyDir()</code> przyjmuje stringowy "label" i kolekcję
+        "obj". Sprawdza czy "obj" może być iterowany i przekazuje go do funkcji
+        <code>logIfObjectOrArray()</code> ktora tworzy grupę w consoli dla
+        logowanie properties tego "obj". Jeżeli propertie to kolekcja, odbywa
+        się rekursywne wywółanie funkcji <code>logIfObjectOrArray()</code>
+      </p>
+      <h1 class="warning">To see results please open console!!!</h1>
     </div>
     <script src="./index.js"></script>
-</body>
-
+  </body>
 </html>
