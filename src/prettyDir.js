@@ -1,28 +1,19 @@
-import { logIfNotCollection, divideLog, logIfCollection } from "./logFunctions.js";
-
-const typeVerification = (prop) => {
-  let propType = typeof prop;
-  let isPropNull = prop == null;
-
-  if (propType !== "object" || isPropNull) {
-    logIfNotCollection(isPropNull, propType);
-    return false;
-  } else {
-    return true
-  }
-}
+import { logIfNotCollection } from "./logFunctions.js";
+import processCollection from './processCollection.js';
+import { labelToUpperCase } from './processStrings.js';
 
 const prettyDir = (label, obj) => {
 
-  const labelUpper = label.toUpperCase();
+  let propType = typeof obj;
+  let isObjNull = obj == null;
+  let upperLabel = labelToUpperCase(label);
 
-  divideLog(label, 'START');
-
-  if (typeVerification(obj)) {
-    logIfCollection(labelUpper, obj);
+  if (propType !== "object" || isObjNull) {
+    logIfNotCollection(propType, isObjNull, upperLabel);
+  } else {
+    processCollection(label, obj);
   }
 
-  divideLog(label, 'END');
 };
 
 export default prettyDir;
