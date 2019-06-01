@@ -1,6 +1,6 @@
 import { logIfNotCollection } from "./logFunctions.js";
 import processCollection from './processCollection.js';
-import { labelToUpperCase } from './processStrings.js';
+import { labelToUpperCase } from './labelToUpperCase.js';
 
 const prettyDir = (label, obj) => {
 
@@ -11,7 +11,7 @@ const prettyDir = (label, obj) => {
   if (propType !== "object" || isObjNull) {
     logIfNotCollection(propType, isObjNull, upperLabel);
   } else {
-    processCollection(label, obj);
+    processCollection(upperLabel, obj);
   }
 
 };
