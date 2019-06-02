@@ -6,3 +6,13 @@ export const logIfNotCollection = (propType, isPropNull, propLabel) => {
 Function "prettyDir" accepts just iterable collections!`
   );;
 };
+
+export const logGroupeOpenLine = (label, key = "") => {
+
+  if (label.endsWith("_temp")) {
+
+    console.groupCollapsed(key, label.slice(0, label.length - 5));
+  } else {
+    console.group(`Collection:`, label);
+  }
+}

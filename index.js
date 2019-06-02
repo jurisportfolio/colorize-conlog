@@ -6,12 +6,12 @@ const preObj = { foo: "napis", boo: 3, woo: null, too: preTab };
 const tab = [1, "napis", preTab, preObj];
 
 prettyDir("new1", preTab);
-prettyDir(preTab, preTab);
-prettyDir("new2", tab);
+// prettyDir(preTab, preTab);
+// prettyDir("new2", tab);
 // prettyDir("new3", null);
-prettyDir("new4", []);
-prettyDir("new5", preObj);
+// prettyDir("new4", []);
+// prettyDir("new5", preObj);
 // prettyDir("", 6);
 // prettyDir(6, 6);
 // prettyDir("new6", "new log");
-prettyDir("Array", tab);
+// prettyDir("Array", tab);
