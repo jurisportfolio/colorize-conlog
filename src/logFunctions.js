@@ -1,11 +1,11 @@
-import { labelToUpperCase } from './utilityFunctions.js';
+import { validateLabel } from './utilityFunctions.js';
 
 export const logErrorIfNotCollection = (propType, isPropNull, propLabel) => {
 
   return console.log(
     `%c%s`,
     "color: red",
-    `By loging ${labelToUpperCase(propLabel)}, you try to log "${isPropNull ? "null" : propType}".
+    `By loging ${validateLabel(propLabel).toUpperCase()}, you try to log "${isPropNull ? "null" : propType}".
 Function "prettyDir" accepts just iterable collections!`
   );;
 };
@@ -27,6 +27,8 @@ export const logNonCollectionItem = (val, key, color) => {
 }
 
 export const logGroupeOpenLine = (label, key = "", color = "black") => {
+
+  label = validateLabel(label);
 
   if (label.endsWith("_temp")) {
 

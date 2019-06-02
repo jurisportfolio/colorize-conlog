@@ -1,11 +1,9 @@
-export const labelToUpperCase = (label) => {
+export const validateLabel = (label) => {
 
   if (typeof label !== "string" || label === "") {
-    label = "NO NAME";
+    label = `{ INVALID NAME }`;
   };
-  let upperLabel = label.toUpperCase();
-
-  return upperLabel;
+  return label;
 }
 
 export const getColorAndType = (val) => {
