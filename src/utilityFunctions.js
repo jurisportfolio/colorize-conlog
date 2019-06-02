@@ -8,7 +8,6 @@ export const labelToUpperCase = (label) => {
   return upperLabel;
 }
 
-
 export const getColorAndType = (val) => {
   let color = null;
   let type = null;
@@ -27,7 +26,7 @@ export const getColorAndType = (val) => {
         type = "null" + "_temp";
         break;
       } else if (Array.isArray(val)) {
-        color = "pink";
+        color = "magenta";
         type = "array" + "_temp";
         break;
       } else {

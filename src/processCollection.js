@@ -1,28 +1,27 @@
-import { getColorAndType } from "./helpFunction.js";
-import { logGroupeOpenLine } from "./logFunctions.js";
-
-export const logNonCollectionItem = () => {
-
-}
+import { getColorAndType } from "./utilityFunctions.js";
+import { logGroupeOpenLine, logNonCollectionItem, logErrorIfObjEmpty } from "./logFunctions.js";
 
 
-const processCollection = (label, obj) => {
+
+
+const processCollection = (obj) => {
+  logErrorIfObjEmpty(obj);
 
   Object.entries(obj).map(([key, val]) => {
 
-    let itemColorAndType = getColorAndType(val);
+    let { type, color } = getColorAndType(val);
 
     if (
-      itemColorAndType.type == "number_temp" ||
-      itemColorAndType.type == "string_temp" ||
-      itemColorAndType.type == "null_temp") {
+      type == "number_temp" ||
+      type == "string_temp" ||
+      type == "null_temp") {
 
-      console.log(key, val);
+      logNonCollectionItem(val, key, color);
 
     } else {
-      logGroupeOpenLine(itemColorAndType.type, key);
-      processCollection(itemColorAndType.type, val);
-      console.groupEnd(itemColorAndType.type);
+      logGroupeOpenLine(type, key, color);
+      processCollection(val);
+      console.groupEnd(type);
     }
   })
 
