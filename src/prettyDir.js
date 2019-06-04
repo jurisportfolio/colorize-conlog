@@ -1,4 +1,4 @@
-import { logGroupeOpenLine, logErrorIfNotCollection } from "./logFunctions.js";
+import { openConsoleGroupe, logErrorIfNotCollection, closeConsoleGroupe } from "./logFunctions.js";
 import processCollection from './processCollection.js';
 
 
@@ -11,9 +11,9 @@ const prettyDir = (label, obj) => {
   if (propType !== "object" || isObjNull) {
     logErrorIfNotCollection(propType, isObjNull, label);
   } else {
-    logGroupeOpenLine(label);
+    openConsoleGroupe(label);
     processCollection(obj);
-    console.groupEnd(label);
+    closeConsoleGroupe(label);
   }
 
 };

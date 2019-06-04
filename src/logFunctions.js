@@ -1,11 +1,25 @@
 import { validateLabel } from './utilityFunctions.js';
 
+// var former = console.log;
+// console.log = function (msg) {
+//   former(msg);
+
+//   // if(msg.indexOf("Brackets") >= 0 || msg.indexOf("Runtime") >= 0) {
+
+//   //}
+//   var ul = document.getElementById("log");
+//   var li = document.createElement("li");
+//   li.appendChild(document.createTextNode(msg));
+//   ul.appendChild(li)
+// }
+
+
 export const logErrorIfNotCollection = (propType, isPropNull, propLabel) => {
 
   return console.log(
     `%c%s`,
     "color: red",
-    `By loging ${validateLabel(propLabel).toUpperCase()}, you try to log "${isPropNull ? "null" : propType}".
+    `By log ${validateLabel(propLabel).toUpperCase()}, you try to log "${isPropNull ? "null" : propType}".
 Function "prettyDir" accepts just iterable collections!`
   );;
 };
@@ -23,10 +37,14 @@ export const logNonCollectionItem = (val, key, color) => {
     `%c%s`,
     `color: ${color}`,
     `${key} ${val}`
-  )
+  );
+  var ul = document.getElementById("log");
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(val));
+  ul.appendChild(li)
 }
 
-export const logGroupeOpenLine = (label, key = "", color = "black") => {
+export const openConsoleGroupe = (label, key = "", color = "black") => {
 
   label = validateLabel(label);
 
@@ -42,3 +60,5 @@ export const logGroupeOpenLine = (label, key = "", color = "black") => {
     console.group(`Collection:`, label);
   }
 }
+
+export const closeConsoleGroupe = (label) => console.groupEnd(label)

@@ -1,5 +1,5 @@
 import { getColorAndType } from "./utilityFunctions.js";
-import { logGroupeOpenLine, logNonCollectionItem, logErrorIfObjEmpty } from "./logFunctions.js";
+import { openConsoleGroupe, logNonCollectionItem, logErrorIfObjEmpty, closeConsoleGroupe } from "./logFunctions.js";
 
 
 
@@ -19,9 +19,9 @@ const processCollection = (obj) => {
       logNonCollectionItem(val, key, color);
 
     } else {
-      logGroupeOpenLine(type, key, color);
+      openConsoleGroupe(type, key, color);
       processCollection(val);
-      console.groupEnd(type);
+      closeConsoleGroupe(type);
     }
   })
 

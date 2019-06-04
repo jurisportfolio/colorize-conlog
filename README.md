@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <title></title>
-  </head>
-
-  <body>
-    <div>
       <h2>Zadanie</h2>
+
       <p>
         1. Stwórz funkcję prettyDir(str, obj), jako ulepszoną funcję
         console.dir() Funkcja ma wypisać wszystkie property obiektu lub tablicy
         wewnątrz grupy i pokolorować je w zależności od typu. Liczby na
         niebiesko. Stringi na czerwono. Obiekty na zielono. Tablice na różowo.
+
       </p>
       <h2>Rozwiązanie</h2>
       <p>
@@ -31,21 +15,9 @@
         logowanie properties tego "obj". Jeżeli propertie to kolekcja, odbywa
         się rekursywne wywółanie funkcji <code>logIfObjectOrArray()</code>
       </p>
-      <div>
-        <h2>Tu</h2>
-        <ul id="log"></ul>
-      </div>
 
-      <script src="https://static.jsbin.com/js/embed.min.js?4.1.7"></script>
-      <code class="example"
+      <code
         >const prePreObj = { foo: "some", boo: 5, woo: [], too: null };<br />
         const preTab = [1, 2, "napis", prePreObj];<br />
         const preObj = { foo: "napis", boo: 3, woo: null, too: preTab };<br />
-        const tab = [1, "napis", preTab, preObj];</code
-      >
-      <h1 class="warning">To see results please open console!!!</h1>
-    </div>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="module" src="./index.js"></script>
-  </body>
-</html>
+        const tab = [1, "napis", preTab, preObj];</code>
