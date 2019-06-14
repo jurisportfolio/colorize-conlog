@@ -2,14 +2,14 @@ Projects page
 
 [Colorize Conlog](https://jurisportfolio.github.io/colorize-conlog/)
 
-## Zadanie tag
+## Zadanie
 
 Stwórz funkcję prettyDir(str, obj), jako ulepszoną funcję
 console.dir() Funkcja ma wypisać wszystkie property obiektu lub tablicy
 wewnątrz grupy i pokolorować je w zależności od typu. Liczby na
 niebiesko. Stringi na czerwono. Obiekty na zielono. Tablice na różowo.
 
-## Rozwiązanie tag
+## Rozwiązanie
 
 Funkcja <code>prettyDir()</code> przyjmuje stringowy "label" i kolekcję
 "obj". Sprawdza czy "obj" może być iterowany i przekazuje go do funkcji
