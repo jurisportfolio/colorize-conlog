@@ -59,6 +59,9 @@ export const openConsoleGroupe = (label, key = "", color = "black") => {
   } else {
     console.group(`Collection:`, label);
   }
+  var ul = document.getElementById("log");
+  var hr = document.createElement("hr");
+  ul.appendChild(hr)
 }
 
 export const closeConsoleGroupe = (label) => console.groupEnd(label)
