@@ -1,5 +1,5 @@
-import { openConsoleGroupe, logErrorIfNotCollection, closeConsoleGroupe } from "./logFunctions.js";
-import processCollection from './processCollection.js';
+import { openConsoleGroupe, logErrorIfNotCollection, closeConsoleGroupe } from '../logFunctions/logFunctions';
+import processCollection from '../processCollection/processCollection';
 
 
 const prettyDir = (label, obj) => {
