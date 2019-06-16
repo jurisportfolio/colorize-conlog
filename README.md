@@ -17,8 +17,9 @@ Funkcja <code>prettyDir()</code> przyjmuje stringowy "label" i kolekcję
 logowanie properties tego "obj". Jeżeli propertie to kolekcja, odbywa
 się rekursywne wywółanie funkcji <code>logIfObjectOrArray()</code>
 
-````const prePreObj = { foo: "some", boo: 5, woo: [], too: null };<br />
+```
+  const prePreObj = { foo: "some", boo: 5, woo: [], too: null };<br />
   const preTab = [1, 2, "napis", prePreObj];<br />
   const preObj = { foo: "napis", boo: 3, woo: null, too: preTab };<br />
-  const tab = [1, "napis", preTab, preObj];```
-````
+  const tab = [1, "napis", preTab, preObj];
+```

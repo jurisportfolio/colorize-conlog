@@ -21,7 +21,7 @@ export const logErrorIfNotCollection = (propType, isPropNull, propLabel) => {
     "color: red",
     `By log ${validateLabel(propLabel).toUpperCase()}, you try to log "${isPropNull ? "null" : propType}".
 Function "prettyDir" accepts just iterable collections!`
-  );;
+  );
 };
 
 export const logErrorIfObjEmpty = (obj) => {
