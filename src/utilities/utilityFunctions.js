@@ -21,17 +21,20 @@ export const getColorAndType = (val) => {
     case "object":
       if (val == null) {
         color = "orange";
-        type = "null" + "_temp";
+        type = "null_temp";
         break;
       } else if (Array.isArray(val)) {
         color = "magenta";
-        type = "array" + "_temp";
+        type = "array_temp";
         break;
       } else {
         color = "green";
         type = typeof val + "_temp";
         break;
       }
+    default:
+      color = null;
+      type = null;
   }
   return { color: color, type: type };
 }
